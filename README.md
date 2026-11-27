@@ -1,6 +1,6 @@
 # synthetic-users-confidence
 
-Servidor MCP que mede quão fiéis são usuários sintéticos a pessoas reais. O desenho completo está no [PRD](docs/specs/2026-11-26-synthetic-users-confidence-prd.md).
+Servidor MCP que mede quão fiéis são usuários sintéticos a pessoas reais. O desenho completo está no [PRD](docs/specs/2026-11-26-synthetic-users-confidence-prd.md). As contas que o servidor faz estão no [modelo matemático](docs/modelo-matematico.md).
 
 > **Status: esqueleto.** Três ferramentas funcionam e o terceiro sinal de confiança ainda não existe. Não use os resultados como evidência.
 
