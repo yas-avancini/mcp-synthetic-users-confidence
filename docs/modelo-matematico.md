@@ -146,7 +146,7 @@ O terceiro sinal do PRD (acerto histórico) ainda não existe, então o nível *
 \text{EMD}(p_s, p_h) < \text{EMD}(p_{\text{sorteio}}, p_h)
 ```
 
-> **Limitação conhecida.** Em `validar_usuario` (`tools.py`), a comparação está sendo feita contra o próprio sintético, $\text{EMD}(p_{\text{sorteio}}, p_s)$, e não contra os humanos do segmento, como faz o experimento às cegas (`experiments/run_blind_experiment.py`). Como o critério só pesa no nível alto, que está bloqueado, os níveis atuais não mudam. O campo `melhor_que_perguntar_a_qualquer_um` do JSON, porém, pode estar errado até a correção.
+É a mesma referência que o experimento às cegas usa (`experiments/run_blind_experiment.py`).
 
 ### Insight em uma frase
 
