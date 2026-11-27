@@ -2,7 +2,7 @@
 
 import pytest
 
-from synthetic_users_confidence import base, tools
+from synthetic_users_confidence import base, scales, tools
 
 
 @pytest.fixture(autouse=True)
@@ -12,6 +12,8 @@ def _isolado(tmp_path, monkeypatch):
     monkeypatch.setitem(__import__("sys").modules, "keyring", None)  # cofre do sistema fora dos testes
     tools.STATE.clear()
     base._MEMORIA.clear()
+    scales.restaurar()
     yield
     tools.STATE.clear()
     base._MEMORIA.clear()
+    scales.restaurar()
