@@ -33,6 +33,21 @@ Instalar no Claude Code:
 claude mcp add synthetic-users-confidence -- "$(pwd)/.venv/bin/synthetic-users-confidence"
 ```
 
+## Experimente com o exemplo
+
+A pasta `exemplo/` tem uma pesquisa **fictícia** sobre IA no trabalho: 600 pessoas, com cargo e porte da empresa, que respondem a 2 perguntas de 1 a 5. Ela vem com o dicionário e com dois usuários sintéticos prontos para o grupo "Gerente". Você não precisa baixar nada nem chamar um LLM.
+
+Com o servidor instalado no Claude Code, peça:
+
+> Importe `exemplo/respostas.csv` com o dicionário `exemplo/dicionario.json`. Depois valide os dois usuários de `exemplo/sinteticas.json` na pergunta `confia_ia`, segmento cargo Gerente.
+
+| Usuário | Como foi gerado | Confiabilidade |
+| --- | --- | --- |
+| `parecido` | Sorteado da mesma distribuição dos gerentes reais | Média (alta exige os três sinais, que esta versão ainda não calcula) |
+| `otimista` | Confia na IA bem mais que os gerentes reais | Baixa: média 4,30 contra 2,92, p<0,01 |
+
+A importação também mostra a `cobertura`: 22 pessoas responderam "Não sei", que fica fora da escala. Os arquivos saem de `python exemplo/gerar.py`, com semente fixa, e um teste confere que o exemplo continua dando esse resultado.
+
 ## Importar seus dados
 
 | Fonte | Como passar em `fonte` | Precisa de |

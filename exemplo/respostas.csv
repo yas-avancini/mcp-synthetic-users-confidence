@@ -1,0 +1,601 @@
+respondente,cargo,porte,confia_ia,recomendaria
+p001,Analista,Média,Nem confio nem desconfio,Talvez
+p002,Gerente,Grande,Confio um pouco,Talvez
+p003,Diretoria,Grande,Confio um pouco,Talvez
+p004,Diretoria,Média,Desconfio um pouco,Improvável
+p005,Gerente,Média,Desconfio muito,Talvez
+p006,Analista,Pequena,Nem confio nem desconfio,Talvez
+p007,Analista,Grande,Confio um pouco,Talvez
+p008,Diretoria,Média,Confio um pouco,Improvável
+p009,Gerente,Pequena,Confio um pouco,Improvável
+p010,Gerente,Média,Confio um pouco,Talvez
+p011,Gerente,Pequena,Nem confio nem desconfio,Talvez
+p012,Gerente,Média,Desconfio muito,Provável
+p013,Gerente,Pequena,Desconfio muito,Muito provável
+p014,Diretoria,Pequena,Nem confio nem desconfio,Improvável
+p015,Gerente,Média,Confio muito,Muito provável
+p016,Gerente,Pequena,Desconfio muito,Talvez
+p017,Analista,Média,Desconfio um pouco,Muito improvável
+p018,Gerente,Média,Nem confio nem desconfio,Muito provável
+p019,Diretoria,Pequena,Confio um pouco,Talvez
+p020,Gerente,Média,Desconfio um pouco,Provável
+p021,Diretoria,Pequena,Desconfio um pouco,Provável
+p022,Analista,Média,Confio um pouco,Talvez
+p023,Gerente,Pequena,Desconfio um pouco,Talvez
+p024,Analista,Pequena,Nem confio nem desconfio,Provável
+p025,Gerente,Grande,Desconfio um pouco,Talvez
+p026,Analista,Média,Confio um pouco,Provável
+p027,Diretoria,Média,Confio um pouco,Improvável
+p028,Gerente,Média,Desconfio um pouco,Provável
+p029,Gerente,Média,Nem confio nem desconfio,Muito provável
+p030,Analista,Pequena,Desconfio um pouco,Talvez
+p031,Diretoria,Pequena,Desconfio um pouco,Talvez
+p032,Analista,Grande,Desconfio um pouco,Provável
+p033,Gerente,Média,Confio um pouco,Talvez
+p034,Analista,Grande,Não sei,Improvável
+p035,Gerente,Pequena,Nem confio nem desconfio,Muito provável
+p036,Diretoria,Pequena,Desconfio muito,Provável
+p037,Analista,Média,Confio muito,Muito provável
+p038,Analista,Média,Desconfio um pouco,Provável
+p039,Analista,Pequena,Confio um pouco,Provável
+p040,Gerente,Média,Desconfio um pouco,Talvez
+p041,Analista,Grande,Nem confio nem desconfio,Provável
+p042,Gerente,Grande,Desconfio um pouco,Muito provável
+p043,Diretoria,Pequena,Desconfio um pouco,Talvez
+p044,Analista,Pequena,Confio muito,Provável
+p045,Analista,Média,Confio um pouco,Provável
+p046,Analista,Pequena,Confio muito,Provável
+p047,Diretoria,Pequena,Confio um pouco,Talvez
+p048,Gerente,Pequena,Confio um pouco,Talvez
+p049,Analista,Grande,Confio muito,Provável
+p050,Analista,Pequena,Desconfio um pouco,Improvável
+p051,Analista,Grande,Desconfio um pouco,Muito provável
+p052,Gerente,Média,Confio muito,Muito provável
+p053,Gerente,Grande,Nem confio nem desconfio,Provável
+p054,Gerente,Pequena,Desconfio muito,Provável
+p055,Gerente,Pequena,Confio muito,Provável
+p056,Analista,Média,Não sei,Improvável
+p057,Analista,Média,Desconfio um pouco,Improvável
+p058,Gerente,Grande,Confio um pouco,Muito provável
+p059,Gerente,Grande,Nem confio nem desconfio,Muito provável
+p060,Analista,Média,Desconfio um pouco,Improvável
+p061,Gerente,Média,Desconfio um pouco,Muito improvável
+p062,Gerente,Pequena,Nem confio nem desconfio,Talvez
+p063,Gerente,Pequena,Confio um pouco,Talvez
+p064,Diretoria,Grande,Desconfio um pouco,Talvez
+p065,Analista,Pequena,Confio um pouco,Talvez
+p066,Gerente,Média,Desconfio um pouco,Talvez
+p067,Diretoria,Grande,Confio um pouco,Improvável
+p068,Gerente,Média,Confio um pouco,Talvez
+p069,Diretoria,Grande,Confio um pouco,Muito improvável
+p070,Gerente,Média,Nem confio nem desconfio,Improvável
+p071,Analista,Grande,Confio um pouco,Improvável
+p072,Analista,Pequena,Nem confio nem desconfio,Provável
+p073,Analista,Média,Desconfio um pouco,Provável
+p074,Gerente,Grande,Confio um pouco,Improvável
+p075,Diretoria,Pequena,Desconfio muito,Provável
+p076,Gerente,Grande,Confio um pouco,Talvez
+p077,Analista,Média,Não sei,Provável
+p078,Gerente,Pequena,Desconfio um pouco,Improvável
+p079,Diretoria,Média,Confio um pouco,Improvável
+p080,Gerente,Pequena,Confio um pouco,Talvez
+p081,Diretoria,Média,Desconfio um pouco,Improvável
+p082,Analista,Pequena,Confio um pouco,Talvez
+p083,Gerente,Pequena,Desconfio um pouco,Provável
+p084,Diretoria,Média,Desconfio muito,Provável
+p085,Gerente,Pequena,Desconfio muito,Talvez
+p086,Gerente,Grande,Desconfio um pouco,Talvez
+p087,Analista,Grande,Confio um pouco,Improvável
+p088,Analista,Grande,Desconfio um pouco,Provável
+p089,Analista,Média,Confio um pouco,Provável
+p090,Diretoria,Média,Desconfio muito,Provável
+p091,Analista,Média,Confio muito,Improvável
+p092,Analista,Média,Desconfio um pouco,Muito provável
+p093,Gerente,Pequena,Confio um pouco,Provável
+p094,Diretoria,Média,Desconfio muito,Talvez
+p095,Gerente,Pequena,Nem confio nem desconfio,Provável
+p096,Analista,Grande,Confio um pouco,Muito provável
+p097,Diretoria,Pequena,Desconfio um pouco,Improvável
+p098,Analista,Média,Confio muito,Muito improvável
+p099,Gerente,Grande,Nem confio nem desconfio,Talvez
+p100,Gerente,Média,Confio um pouco,Provável
+p101,Analista,Pequena,Confio muito,Talvez
+p102,Diretoria,Pequena,Desconfio um pouco,Improvável
+p103,Analista,Média,Nem confio nem desconfio,Provável
+p104,Diretoria,Pequena,Confio muito,Talvez
+p105,Gerente,Média,Confio um pouco,Muito provável
+p106,Diretoria,Média,Nem confio nem desconfio,Muito provável
+p107,Diretoria,Pequena,Nem confio nem desconfio,Provável
+p108,Analista,Grande,Desconfio um pouco,Provável
+p109,Analista,Média,Confio um pouco,Muito provável
+p110,Gerente,Pequena,Nem confio nem desconfio,Improvável
+p111,Analista,Média,Confio muito,Improvável
+p112,Analista,Grande,Confio muito,Provável
+p113,Analista,Média,Confio muito,Talvez
+p114,Analista,Média,Confio um pouco,Muito provável
+p115,Gerente,Média,Confio um pouco,Muito provável
+p116,Gerente,Média,Desconfio um pouco,Talvez
+p117,Analista,Pequena,Confio um pouco,Muito improvável
+p118,Analista,Média,Confio um pouco,Improvável
+p119,Diretoria,Pequena,Desconfio um pouco,Talvez
+p120,Diretoria,Pequena,Desconfio muito,Provável
+p121,Analista,Grande,Confio um pouco,Provável
+p122,Gerente,Média,Nem confio nem desconfio,Muito provável
+p123,Analista,Média,Confio muito,Improvável
+p124,Diretoria,Média,Nem confio nem desconfio,Talvez
+p125,Gerente,Pequena,Confio um pouco,Provável
+p126,Diretoria,Média,Nem confio nem desconfio,Improvável
+p127,Gerente,Grande,Desconfio um pouco,Provável
+p128,Diretoria,Média,Confio um pouco,Provável
+p129,Gerente,Pequena,Confio um pouco,Talvez
+p130,Analista,Pequena,Confio um pouco,Muito provável
+p131,Analista,Grande,Confio um pouco,Muito provável
+p132,Gerente,Média,Desconfio um pouco,Muito provável
+p133,Diretoria,Grande,Nem confio nem desconfio,Talvez
+p134,Gerente,Pequena,Desconfio muito,Talvez
+p135,Diretoria,Grande,Confio muito,Provável
+p136,Gerente,Média,Desconfio muito,Talvez
+p137,Analista,Pequena,Nem confio nem desconfio,Provável
+p138,Gerente,Média,Confio um pouco,Provável
+p139,Analista,Média,Desconfio um pouco,Provável
+p140,Gerente,Média,Confio um pouco,Provável
+p141,Gerente,Média,Nem confio nem desconfio,Muito improvável
+p142,Diretoria,Média,Desconfio um pouco,Improvável
+p143,Gerente,Média,Desconfio muito,Muito provável
+p144,Analista,Grande,Não sei,Provável
+p145,Gerente,Média,Desconfio muito,Provável
+p146,Gerente,Grande,Confio um pouco,Provável
+p147,Diretoria,Média,Nem confio nem desconfio,Talvez
+p148,Gerente,Média,Não sei,Improvável
+p149,Analista,Pequena,Confio muito,Talvez
+p150,Diretoria,Pequena,Desconfio muito,Talvez
+p151,Gerente,Grande,Nem confio nem desconfio,Provável
+p152,Gerente,Pequena,Desconfio um pouco,Muito improvável
+p153,Analista,Grande,Confio muito,Provável
+p154,Diretoria,Grande,Nem confio nem desconfio,Muito provável
+p155,Gerente,Pequena,Desconfio muito,Provável
+p156,Diretoria,Média,Desconfio um pouco,Improvável
+p157,Gerente,Média,Confio um pouco,Muito provável
+p158,Gerente,Média,Nem confio nem desconfio,Talvez
+p159,Gerente,Grande,Desconfio muito,Talvez
+p160,Analista,Média,Nem confio nem desconfio,Muito provável
+p161,Gerente,Pequena,Desconfio um pouco,Talvez
+p162,Gerente,Média,Nem confio nem desconfio,Improvável
+p163,Analista,Média,Confio muito,Muito provável
+p164,Analista,Grande,Nem confio nem desconfio,Muito improvável
+p165,Analista,Grande,Nem confio nem desconfio,Muito provável
+p166,Analista,Média,Confio um pouco,Improvável
+p167,Gerente,Pequena,Confio um pouco,Talvez
+p168,Diretoria,Média,Desconfio um pouco,Muito improvável
+p169,Analista,Grande,Não sei,Provável
+p170,Gerente,Média,Desconfio muito,Improvável
+p171,Gerente,Grande,Nem confio nem desconfio,Provável
+p172,Analista,Média,Nem confio nem desconfio,Talvez
+p173,Analista,Média,Confio um pouco,Talvez
+p174,Analista,Média,Desconfio um pouco,Provável
+p175,Gerente,Pequena,Desconfio um pouco,Improvável
+p176,Gerente,Grande,Nem confio nem desconfio,Improvável
+p177,Gerente,Média,Não sei,Provável
+p178,Analista,Média,Confio um pouco,Muito provável
+p179,Gerente,Pequena,Nem confio nem desconfio,Talvez
+p180,Gerente,Média,Nem confio nem desconfio,Talvez
+p181,Diretoria,Média,Confio muito,Talvez
+p182,Gerente,Grande,Confio muito,Talvez
+p183,Analista,Pequena,Desconfio um pouco,Muito provável
+p184,Analista,Grande,Nem confio nem desconfio,Provável
+p185,Analista,Média,Desconfio um pouco,Muito provável
+p186,Gerente,Grande,Nem confio nem desconfio,Muito provável
+p187,Diretoria,Média,Desconfio muito,Improvável
+p188,Gerente,Média,Confio um pouco,Improvável
+p189,Diretoria,Pequena,Desconfio um pouco,Provável
+p190,Analista,Pequena,Confio muito,Provável
+p191,Analista,Pequena,Nem confio nem desconfio,Talvez
+p192,Diretoria,Pequena,Desconfio muito,Improvável
+p193,Gerente,Média,Confio um pouco,Muito provável
+p194,Analista,Pequena,Confio um pouco,Muito improvável
+p195,Analista,Grande,Confio um pouco,Talvez
+p196,Diretoria,Pequena,Confio um pouco,Provável
+p197,Analista,Média,Confio muito,Talvez
+p198,Analista,Média,Confio um pouco,Provável
+p199,Analista,Pequena,Desconfio um pouco,Muito provável
+p200,Diretoria,Média,Confio um pouco,Provável
+p201,Gerente,Pequena,Confio um pouco,Improvável
+p202,Analista,Média,Desconfio um pouco,Provável
+p203,Gerente,Média,Confio muito,Improvável
+p204,Diretoria,Pequena,Desconfio um pouco,Improvável
+p205,Diretoria,Pequena,Nem confio nem desconfio,Muito improvável
+p206,Gerente,Grande,Confio um pouco,Improvável
+p207,Gerente,Pequena,Nem confio nem desconfio,Muito improvável
+p208,Diretoria,Média,Nem confio nem desconfio,Muito improvável
+p209,Gerente,Grande,Desconfio um pouco,Improvável
+p210,Gerente,Pequena,Nem confio nem desconfio,Provável
+p211,Gerente,Grande,Nem confio nem desconfio,Muito improvável
+p212,Diretoria,Grande,Desconfio um pouco,Provável
+p213,Gerente,Pequena,Confio um pouco,Provável
+p214,Analista,Média,Confio um pouco,Provável
+p215,Diretoria,Média,Desconfio um pouco,Muito improvável
+p216,Analista,Média,Não sei,Muito provável
+p217,Analista,Grande,Desconfio um pouco,Talvez
+p218,Analista,Pequena,Confio muito,Provável
+p219,Gerente,Pequena,Nem confio nem desconfio,Talvez
+p220,Analista,Pequena,Confio muito,Talvez
+p221,Analista,Pequena,Nem confio nem desconfio,Muito provável
+p222,Analista,Grande,Confio um pouco,Provável
+p223,Analista,Grande,Confio um pouco,Talvez
+p224,Analista,Média,Confio muito,Muito provável
+p225,Gerente,Média,Desconfio um pouco,Improvável
+p226,Analista,Média,Confio um pouco,Improvável
+p227,Diretoria,Pequena,Desconfio muito,Talvez
+p228,Diretoria,Média,Confio um pouco,Muito provável
+p229,Gerente,Grande,Desconfio muito,Provável
+p230,Gerente,Média,Desconfio um pouco,Muito provável
+p231,Diretoria,Pequena,Nem confio nem desconfio,Talvez
+p232,Analista,Pequena,Confio um pouco,Provável
+p233,Gerente,Grande,Desconfio muito,Improvável
+p234,Gerente,Pequena,Desconfio um pouco,Improvável
+p235,Analista,Pequena,Confio muito,Talvez
+p236,Diretoria,Pequena,Nem confio nem desconfio,Talvez
+p237,Diretoria,Pequena,Desconfio um pouco,Provável
+p238,Gerente,Pequena,Desconfio um pouco,Provável
+p239,Analista,Média,Nem confio nem desconfio,Muito provável
+p240,Gerente,Média,Nem confio nem desconfio,Talvez
+p241,Gerente,Pequena,Confio um pouco,Talvez
+p242,Analista,Pequena,Nem confio nem desconfio,Provável
+p243,Diretoria,Média,Nem confio nem desconfio,Muito improvável
+p244,Gerente,Pequena,Confio muito,Muito provável
+p245,Gerente,Pequena,Desconfio um pouco,Improvável
+p246,Analista,Grande,Nem confio nem desconfio,Muito provável
+p247,Gerente,Pequena,Nem confio nem desconfio,Provável
+p248,Analista,Grande,Confio um pouco,Muito provável
+p249,Analista,Grande,Nem confio nem desconfio,Provável
+p250,Analista,Média,Confio um pouco,Muito provável
+p251,Diretoria,Média,Confio um pouco,Talvez
+p252,Analista,Pequena,Confio um pouco,Talvez
+p253,Diretoria,Média,Confio um pouco,Talvez
+p254,Analista,Média,Confio muito,Provável
+p255,Analista,Média,Nem confio nem desconfio,Muito provável
+p256,Analista,Grande,Confio um pouco,Improvável
+p257,Analista,Média,Confio um pouco,Talvez
+p258,Analista,Pequena,Confio muito,Provável
+p259,Gerente,Pequena,Nem confio nem desconfio,Provável
+p260,Analista,Média,Nem confio nem desconfio,Talvez
+p261,Analista,Pequena,Confio um pouco,Talvez
+p262,Gerente,Média,Confio um pouco,Muito provável
+p263,Diretoria,Grande,Confio muito,Improvável
+p264,Analista,Grande,Confio muito,Muito provável
+p265,Gerente,Pequena,Confio um pouco,Improvável
+p266,Diretoria,Média,Desconfio um pouco,Provável
+p267,Analista,Média,Confio um pouco,Talvez
+p268,Diretoria,Média,Confio um pouco,Provável
+p269,Diretoria,Média,Nem confio nem desconfio,Talvez
+p270,Gerente,Pequena,Desconfio um pouco,Improvável
+p271,Analista,Média,Confio um pouco,Provável
+p272,Analista,Pequena,Desconfio um pouco,Talvez
+p273,Analista,Pequena,Confio um pouco,Talvez
+p274,Analista,Grande,Confio um pouco,Provável
+p275,Analista,Grande,Confio muito,Talvez
+p276,Analista,Grande,Confio muito,Provável
+p277,Analista,Média,Confio um pouco,Provável
+p278,Gerente,Pequena,Não sei,Talvez
+p279,Gerente,Grande,Nem confio nem desconfio,Muito provável
+p280,Analista,Média,Confio um pouco,Improvável
+p281,Gerente,Pequena,Confio um pouco,Provável
+p282,Analista,Média,Confio um pouco,Provável
+p283,Diretoria,Média,Desconfio um pouco,Muito improvável
+p284,Analista,Pequena,Nem confio nem desconfio,Talvez
+p285,Diretoria,Pequena,Nem confio nem desconfio,Improvável
+p286,Gerente,Pequena,Desconfio muito,Muito improvável
+p287,Gerente,Média,Nem confio nem desconfio,Muito provável
+p288,Gerente,Grande,Confio um pouco,Muito improvável
+p289,Diretoria,Média,Desconfio muito,Muito improvável
+p290,Gerente,Pequena,Desconfio um pouco,Muito improvável
+p291,Analista,Pequena,Confio um pouco,Provável
+p292,Diretoria,Média,Nem confio nem desconfio,Talvez
+p293,Gerente,Média,Desconfio muito,Muito provável
+p294,Analista,Grande,Desconfio um pouco,Provável
+p295,Analista,Média,Confio um pouco,Improvável
+p296,Analista,Pequena,Nem confio nem desconfio,Provável
+p297,Analista,Pequena,Confio um pouco,Provável
+p298,Diretoria,Grande,Desconfio muito,Talvez
+p299,Analista,Grande,Nem confio nem desconfio,Talvez
+p300,Analista,Grande,Confio um pouco,Provável
+p301,Gerente,Grande,Desconfio muito,Talvez
+p302,Analista,Pequena,Confio um pouco,Talvez
+p303,Gerente,Média,Confio um pouco,Muito improvável
+p304,Gerente,Pequena,Desconfio muito,Improvável
+p305,Diretoria,Grande,Desconfio um pouco,Improvável
+p306,Analista,Pequena,Nem confio nem desconfio,Muito improvável
+p307,Analista,Grande,Confio um pouco,Provável
+p308,Analista,Média,Confio muito,Provável
+p309,Diretoria,Média,Nem confio nem desconfio,Improvável
+p310,Analista,Média,Desconfio muito,Talvez
+p311,Analista,Pequena,Nem confio nem desconfio,Provável
+p312,Diretoria,Grande,Desconfio um pouco,Improvável
+p313,Analista,Pequena,Confio um pouco,Improvável
+p314,Analista,Pequena,Desconfio um pouco,Improvável
+p315,Gerente,Pequena,Desconfio um pouco,Provável
+p316,Analista,Pequena,Desconfio muito,Provável
+p317,Diretoria,Pequena,Nem confio nem desconfio,Improvável
+p318,Gerente,Pequena,Desconfio um pouco,Provável
+p319,Gerente,Média,Confio muito,Improvável
+p320,Gerente,Pequena,Confio um pouco,Talvez
+p321,Analista,Pequena,Confio muito,Provável
+p322,Gerente,Pequena,Nem confio nem desconfio,Provável
+p323,Analista,Pequena,Desconfio um pouco,Provável
+p324,Analista,Grande,Confio um pouco,Muito provável
+p325,Gerente,Pequena,Confio um pouco,Provável
+p326,Analista,Grande,Confio um pouco,Talvez
+p327,Diretoria,Pequena,Confio muito,Talvez
+p328,Analista,Média,Confio muito,Talvez
+p329,Analista,Pequena,Desconfio um pouco,Talvez
+p330,Gerente,Média,Confio um pouco,Talvez
+p331,Analista,Média,Desconfio muito,Provável
+p332,Analista,Média,Confio muito,Improvável
+p333,Diretoria,Média,Desconfio muito,Improvável
+p334,Analista,Grande,Nem confio nem desconfio,Provável
+p335,Diretoria,Média,Não sei,Improvável
+p336,Gerente,Média,Desconfio um pouco,Talvez
+p337,Analista,Média,Desconfio um pouco,Provável
+p338,Analista,Pequena,Desconfio um pouco,Talvez
+p339,Diretoria,Média,Desconfio um pouco,Improvável
+p340,Gerente,Grande,Desconfio um pouco,Improvável
+p341,Analista,Média,Desconfio um pouco,Provável
+p342,Analista,Grande,Desconfio muito,Provável
+p343,Analista,Média,Desconfio muito,Muito provável
+p344,Analista,Média,Confio um pouco,Muito provável
+p345,Analista,Média,Desconfio um pouco,Provável
+p346,Diretoria,Grande,Desconfio um pouco,Muito improvável
+p347,Diretoria,Média,Desconfio um pouco,Muito improvável
+p348,Gerente,Média,Nem confio nem desconfio,Provável
+p349,Analista,Pequena,Confio um pouco,Talvez
+p350,Gerente,Pequena,Desconfio um pouco,Talvez
+p351,Diretoria,Grande,Confio um pouco,Muito improvável
+p352,Gerente,Grande,Confio um pouco,Muito improvável
+p353,Analista,Grande,Confio muito,Provável
+p354,Analista,Grande,Desconfio um pouco,Provável
+p355,Analista,Grande,Desconfio um pouco,Talvez
+p356,Diretoria,Pequena,Não sei,Improvável
+p357,Diretoria,Média,Desconfio um pouco,Muito improvável
+p358,Gerente,Pequena,Confio muito,Provável
+p359,Analista,Pequena,Confio um pouco,Talvez
+p360,Analista,Grande,Confio um pouco,Talvez
+p361,Analista,Média,Nem confio nem desconfio,Muito provável
+p362,Diretoria,Grande,Nem confio nem desconfio,Improvável
+p363,Diretoria,Média,Confio muito,Muito provável
+p364,Analista,Média,Confio um pouco,Talvez
+p365,Analista,Grande,Confio muito,Provável
+p366,Analista,Grande,Confio muito,Talvez
+p367,Analista,Média,Nem confio nem desconfio,Talvez
+p368,Analista,Média,Nem confio nem desconfio,Talvez
+p369,Analista,Pequena,Confio um pouco,Talvez
+p370,Analista,Média,Confio um pouco,Provável
+p371,Analista,Pequena,Confio um pouco,Muito improvável
+p372,Gerente,Grande,Desconfio muito,Provável
+p373,Gerente,Grande,Nem confio nem desconfio,Talvez
+p374,Analista,Média,Confio um pouco,Talvez
+p375,Analista,Pequena,Confio um pouco,Improvável
+p376,Diretoria,Grande,Desconfio um pouco,Improvável
+p377,Gerente,Grande,Desconfio muito,Provável
+p378,Gerente,Pequena,Confio um pouco,Talvez
+p379,Gerente,Média,Não sei,Provável
+p380,Analista,Pequena,Confio um pouco,Talvez
+p381,Analista,Grande,Desconfio um pouco,Provável
+p382,Analista,Grande,Desconfio um pouco,Provável
+p383,Gerente,Grande,Confio um pouco,Muito provável
+p384,Analista,Média,Nem confio nem desconfio,Provável
+p385,Analista,Pequena,Desconfio muito,Provável
+p386,Diretoria,Pequena,Desconfio um pouco,Muito improvável
+p387,Analista,Média,Confio um pouco,Improvável
+p388,Analista,Média,Confio um pouco,Improvável
+p389,Gerente,Pequena,Nem confio nem desconfio,Provável
+p390,Gerente,Pequena,Desconfio um pouco,Talvez
+p391,Gerente,Média,Desconfio um pouco,Improvável
+p392,Gerente,Pequena,Desconfio um pouco,Improvável
+p393,Diretoria,Média,Confio um pouco,Provável
+p394,Gerente,Pequena,Desconfio um pouco,Provável
+p395,Analista,Grande,Confio um pouco,Improvável
+p396,Analista,Pequena,Nem confio nem desconfio,Talvez
+p397,Analista,Média,Confio um pouco,Improvável
+p398,Gerente,Grande,Confio muito,Provável
+p399,Gerente,Pequena,Desconfio um pouco,Talvez
+p400,Diretoria,Grande,Confio um pouco,Improvável
+p401,Analista,Pequena,Desconfio um pouco,Provável
+p402,Analista,Pequena,Confio um pouco,Talvez
+p403,Analista,Grande,Confio muito,Talvez
+p404,Diretoria,Grande,Desconfio um pouco,Provável
+p405,Gerente,Grande,Confio um pouco,Improvável
+p406,Analista,Média,Nem confio nem desconfio,Provável
+p407,Gerente,Grande,Desconfio um pouco,Provável
+p408,Analista,Média,Não sei,Muito improvável
+p409,Diretoria,Média,Nem confio nem desconfio,Improvável
+p410,Gerente,Grande,Nem confio nem desconfio,Talvez
+p411,Gerente,Pequena,Confio um pouco,Improvável
+p412,Analista,Pequena,Confio um pouco,Provável
+p413,Gerente,Grande,Desconfio um pouco,Provável
+p414,Gerente,Média,Desconfio um pouco,Provável
+p415,Analista,Média,Confio um pouco,Talvez
+p416,Diretoria,Média,Desconfio um pouco,Muito provável
+p417,Gerente,Pequena,Desconfio um pouco,Muito improvável
+p418,Analista,Pequena,Confio um pouco,Provável
+p419,Gerente,Grande,Nem confio nem desconfio,Improvável
+p420,Analista,Pequena,Confio um pouco,Provável
+p421,Gerente,Pequena,Confio muito,Provável
+p422,Gerente,Média,Confio muito,Talvez
+p423,Analista,Média,Nem confio nem desconfio,Provável
+p424,Analista,Grande,Confio um pouco,Provável
+p425,Analista,Grande,Confio um pouco,Provável
+p426,Gerente,Pequena,Desconfio um pouco,Muito improvável
+p427,Analista,Pequena,Nem confio nem desconfio,Talvez
+p428,Diretoria,Grande,Confio um pouco,Muito improvável
+p429,Gerente,Pequena,Confio muito,Muito provável
+p430,Gerente,Média,Nem confio nem desconfio,Provável
+p431,Analista,Média,Nem confio nem desconfio,Talvez
+p432,Gerente,Média,Confio um pouco,Improvável
+p433,Diretoria,Grande,Nem confio nem desconfio,Muito improvável
+p434,Analista,Pequena,Desconfio um pouco,Muito provável
+p435,Diretoria,Pequena,Nem confio nem desconfio,Improvável
+p436,Gerente,Pequena,Confio um pouco,Muito improvável
+p437,Analista,Pequena,Desconfio um pouco,Provável
+p438,Analista,Média,Nem confio nem desconfio,Provável
+p439,Diretoria,Média,Nem confio nem desconfio,Improvável
+p440,Analista,Pequena,Confio um pouco,Provável
+p441,Diretoria,Pequena,Nem confio nem desconfio,Muito provável
+p442,Diretoria,Média,Confio um pouco,Muito improvável
+p443,Gerente,Grande,Desconfio muito,Provável
+p444,Analista,Pequena,Nem confio nem desconfio,Provável
+p445,Analista,Pequena,Confio um pouco,Improvável
+p446,Gerente,Pequena,Desconfio um pouco,Provável
+p447,Gerente,Média,Desconfio muito,Muito improvável
+p448,Diretoria,Pequena,Confio um pouco,Muito provável
+p449,Analista,Pequena,Confio um pouco,Talvez
+p450,Analista,Grande,Desconfio um pouco,Improvável
+p451,Analista,Pequena,Confio muito,Muito provável
+p452,Analista,Grande,Nem confio nem desconfio,Provável
+p453,Gerente,Pequena,Nem confio nem desconfio,Talvez
+p454,Gerente,Média,Nem confio nem desconfio,Improvável
+p455,Analista,Pequena,Desconfio um pouco,Improvável
+p456,Gerente,Grande,Nem confio nem desconfio,Muito provável
+p457,Analista,Média,Confio um pouco,Muito provável
+p458,Analista,Pequena,Confio um pouco,Talvez
+p459,Diretoria,Grande,Desconfio muito,Talvez
+p460,Diretoria,Média,Confio um pouco,Talvez
+p461,Analista,Média,Nem confio nem desconfio,Talvez
+p462,Gerente,Pequena,Nem confio nem desconfio,Provável
+p463,Gerente,Grande,Não sei,Improvável
+p464,Diretoria,Média,Desconfio um pouco,Improvável
+p465,Gerente,Pequena,Nem confio nem desconfio,Provável
+p466,Gerente,Média,Confio muito,Muito provável
+p467,Gerente,Média,Não sei,Provável
+p468,Gerente,Pequena,Desconfio muito,Talvez
+p469,Gerente,Pequena,Desconfio muito,Improvável
+p470,Gerente,Média,Confio um pouco,Muito provável
+p471,Gerente,Média,Não sei,Talvez
+p472,Analista,Pequena,Desconfio muito,Provável
+p473,Diretoria,Média,Desconfio muito,Improvável
+p474,Analista,Pequena,Não sei,Provável
+p475,Gerente,Média,Confio um pouco,Provável
+p476,Gerente,Média,Não sei,Provável
+p477,Gerente,Grande,Confio muito,Improvável
+p478,Analista,Média,Confio um pouco,Talvez
+p479,Analista,Grande,Nem confio nem desconfio,Talvez
+p480,Gerente,Média,Confio um pouco,Provável
+p481,Gerente,Grande,Confio um pouco,Improvável
+p482,Analista,Média,Confio um pouco,Provável
+p483,Diretoria,Pequena,Desconfio muito,Improvável
+p484,Gerente,Grande,Nem confio nem desconfio,Muito provável
+p485,Analista,Grande,Confio um pouco,Talvez
+p486,Diretoria,Grande,Desconfio um pouco,Provável
+p487,Gerente,Pequena,Confio um pouco,Talvez
+p488,Analista,Média,Confio um pouco,Improvável
+p489,Analista,Grande,Confio um pouco,Provável
+p490,Gerente,Pequena,Desconfio um pouco,Improvável
+p491,Analista,Média,Confio um pouco,Muito provável
+p492,Analista,Pequena,Desconfio um pouco,Provável
+p493,Gerente,Média,Nem confio nem desconfio,Provável
+p494,Analista,Média,Confio um pouco,Provável
+p495,Gerente,Média,Confio um pouco,Muito improvável
+p496,Analista,Pequena,Confio um pouco,Muito improvável
+p497,Gerente,Média,Desconfio um pouco,Talvez
+p498,Analista,Pequena,Nem confio nem desconfio,Provável
+p499,Analista,Grande,Confio um pouco,Talvez
+p500,Gerente,Grande,Nem confio nem desconfio,Improvável
+p501,Gerente,Média,Desconfio um pouco,Improvável
+p502,Analista,Pequena,Confio muito,Talvez
+p503,Analista,Grande,Confio muito,Talvez
+p504,Diretoria,Média,Desconfio um pouco,Improvável
+p505,Analista,Pequena,Confio um pouco,Provável
+p506,Analista,Pequena,Desconfio um pouco,Muito provável
+p507,Gerente,Média,Nem confio nem desconfio,Improvável
+p508,Diretoria,Média,Desconfio muito,Talvez
+p509,Analista,Média,Nem confio nem desconfio,Provável
+p510,Analista,Pequena,Desconfio um pouco,Talvez
+p511,Gerente,Média,Nem confio nem desconfio,Talvez
+p512,Diretoria,Média,Confio um pouco,Provável
+p513,Gerente,Grande,Confio um pouco,Muito improvável
+p514,Analista,Média,Confio um pouco,Provável
+p515,Analista,Pequena,Desconfio um pouco,Muito improvável
+p516,Diretoria,Média,Confio um pouco,Improvável
+p517,Gerente,Média,Desconfio um pouco,Talvez
+p518,Analista,Média,Confio muito,Provável
+p519,Analista,Pequena,Nem confio nem desconfio,Talvez
+p520,Gerente,Pequena,Confio um pouco,Muito improvável
+p521,Gerente,Média,Desconfio um pouco,Improvável
+p522,Diretoria,Média,Desconfio muito,Improvável
+p523,Diretoria,Pequena,Confio um pouco,Improvável
+p524,Gerente,Pequena,Nem confio nem desconfio,Provável
+p525,Gerente,Grande,Nem confio nem desconfio,Talvez
+p526,Gerente,Média,Desconfio um pouco,Improvável
+p527,Diretoria,Pequena,Desconfio muito,Improvável
+p528,Gerente,Pequena,Nem confio nem desconfio,Improvável
+p529,Analista,Média,Nem confio nem desconfio,Provável
+p530,Analista,Pequena,Confio um pouco,Muito provável
+p531,Gerente,Média,Nem confio nem desconfio,Muito provável
+p532,Analista,Média,Confio um pouco,Provável
+p533,Gerente,Pequena,Nem confio nem desconfio,Improvável
+p534,Analista,Média,Confio um pouco,Talvez
+p535,Gerente,Média,Nem confio nem desconfio,Talvez
+p536,Gerente,Grande,Nem confio nem desconfio,Talvez
+p537,Analista,Pequena,Nem confio nem desconfio,Talvez
+p538,Diretoria,Pequena,Desconfio um pouco,Talvez
+p539,Gerente,Média,Confio muito,Talvez
+p540,Analista,Média,Desconfio um pouco,Talvez
+p541,Analista,Grande,Confio um pouco,Muito provável
+p542,Gerente,Média,Desconfio muito,Talvez
+p543,Analista,Grande,Confio um pouco,Provável
+p544,Gerente,Média,Confio muito,Improvável
+p545,Analista,Média,Nem confio nem desconfio,Muito provável
+p546,Analista,Pequena,Desconfio um pouco,Talvez
+p547,Diretoria,Pequena,Confio um pouco,Muito provável
+p548,Analista,Pequena,Confio um pouco,Provável
+p549,Diretoria,Pequena,Confio um pouco,Talvez
+p550,Analista,Pequena,Desconfio um pouco,Talvez
+p551,Diretoria,Pequena,Desconfio muito,Improvável
+p552,Analista,Pequena,Nem confio nem desconfio,Muito provável
+p553,Gerente,Pequena,Desconfio um pouco,Provável
+p554,Gerente,Média,Não sei,Provável
+p555,Diretoria,Média,Desconfio um pouco,Improvável
+p556,Analista,Pequena,Nem confio nem desconfio,Muito provável
+p557,Diretoria,Média,Não sei,Talvez
+p558,Diretoria,Pequena,Não sei,Improvável
+p559,Analista,Grande,Desconfio um pouco,Provável
+p560,Analista,Média,Confio um pouco,Provável
+p561,Analista,Grande,Confio um pouco,Muito provável
+p562,Analista,Pequena,Nem confio nem desconfio,Provável
+p563,Analista,Pequena,Confio um pouco,Provável
+p564,Analista,Pequena,Confio um pouco,Talvez
+p565,Diretoria,Média,Nem confio nem desconfio,Improvável
+p566,Analista,Pequena,Confio um pouco,Muito provável
+p567,Diretoria,Pequena,Desconfio muito,Muito improvável
+p568,Analista,Pequena,Nem confio nem desconfio,Talvez
+p569,Gerente,Grande,Confio um pouco,Provável
+p570,Gerente,Média,Confio um pouco,Talvez
+p571,Gerente,Pequena,Confio muito,Provável
+p572,Gerente,Pequena,Desconfio um pouco,Talvez
+p573,Diretoria,Grande,Nem confio nem desconfio,Improvável
+p574,Gerente,Pequena,Confio muito,Provável
+p575,Analista,Média,Nem confio nem desconfio,Talvez
+p576,Gerente,Pequena,Confio muito,Muito improvável
+p577,Diretoria,Pequena,Desconfio um pouco,Provável
+p578,Diretoria,Pequena,Desconfio muito,Muito improvável
+p579,Analista,Pequena,Nem confio nem desconfio,Provável
+p580,Analista,Pequena,Confio muito,Talvez
+p581,Analista,Pequena,Desconfio um pouco,Provável
+p582,Gerente,Pequena,Confio muito,Talvez
+p583,Analista,Média,Confio muito,Muito provável
+p584,Gerente,Média,Confio um pouco,Improvável
+p585,Analista,Grande,Confio um pouco,Improvável
+p586,Diretoria,Pequena,Não sei,Muito improvável
+p587,Gerente,Pequena,Confio um pouco,Provável
+p588,Analista,Média,Confio muito,Muito provável
+p589,Analista,Média,Nem confio nem desconfio,Provável
+p590,Gerente,Pequena,Confio um pouco,Talvez
+p591,Analista,Pequena,Desconfio um pouco,Muito provável
+p592,Analista,Pequena,Confio muito,Talvez
+p593,Analista,Média,Confio um pouco,Provável
+p594,Analista,Média,Nem confio nem desconfio,Talvez
+p595,Gerente,Grande,Desconfio um pouco,Provável
+p596,Analista,Grande,Confio um pouco,Improvável
+p597,Gerente,Grande,Nem confio nem desconfio,Improvável
+p598,Gerente,Média,Confio um pouco,Muito provável
+p599,Gerente,Pequena,Desconfio um pouco,Talvez
+p600,Gerente,Média,Nem confio nem desconfio,Improvável

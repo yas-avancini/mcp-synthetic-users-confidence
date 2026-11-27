@@ -1,0 +1,33 @@
+{
+  "nome": "exemplo-ficticio-ia-no-trabalho",
+  "descricao": "Pesquisa fictícia sobre uso de IA no trabalho, gerada por exemplo/gerar.py",
+  "id": "respondente",
+  "estratos": [
+    "cargo",
+    "porte"
+  ],
+  "perguntas": {
+    "confia_ia": {
+      "texto": "Quanto você confia nas respostas de ferramentas de IA no seu trabalho?",
+      "rotulo": "Confiança na IA",
+      "escala": {
+        "Desconfio muito": 1,
+        "Desconfio um pouco": 2,
+        "Nem confio nem desconfio": 3,
+        "Confio um pouco": 4,
+        "Confio muito": 5
+      }
+    },
+    "recomendaria": {
+      "texto": "Qual a chance de você recomendar uma ferramenta de IA a um colega?",
+      "rotulo": "Recomendaria IA",
+      "escala": {
+        "Muito improvável": 1,
+        "Improvável": 2,
+        "Talvez": 3,
+        "Provável": 4,
+        "Muito provável": 5
+      }
+    }
+  }
+}
