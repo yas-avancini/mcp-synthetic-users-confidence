@@ -6,12 +6,12 @@ Servidor MCP que mede quão fiéis são usuários sintéticos a pessoas reais. O
 
 ## Como funciona nesta versão
 
-Você traz as respostas sintéticas já coletadas; o servidor não chama nenhum LLM. Ele compara com as respostas humanas do holdout de qualquer pesquisa em CSV (veja [Importar seus dados](#importar-seus-dados)). O exemplo pronto usa a [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/) (ODbL 1.0).
+Você traz as respostas sintéticas já coletadas; o servidor não chama nenhum LLM. Ele compara com as respostas humanas do holdout de qualquer pesquisa, em arquivo ou banco de dados (veja [Importar seus dados](#importar-seus-dados)). O exemplo pronto usa a [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/) (ODbL 1.0).
 
 | Ferramenta | O que faz |
 | --- | --- |
 | `conectar_base` | Conecta o RAG que a equipe já tem para calcular o sinal de suporte na base (veja abaixo) |
-| `importar_dados` | Lê o CSV humano com um dicionário do questionário e separa o holdout por respondente, estratificado pelas colunas que você escolher |
+| `importar_dados` | Lê as respostas humanas (CSV, Excel, Parquet, JSON, SQLite ou qualquer banco SQL) com um dicionário do questionário e separa o holdout por respondente, estratificado pelas colunas que você escolher |
 | `amostrar` | Contagens, média e variância das respostas sintéticas |
 | `pontuar_resposta` | Sinais de confiança separados, com margem de erro (95%); o que não foi calculado vem com `status` e motivo |
 | `validar_usuario` | Distância entre o usuário e os humanos do segmento, com intervalo de 95%, piso de ruído humano, razão de variância, margem de erro (média, proporção e variância) e p-value (distribuição e variância) |
@@ -35,7 +35,22 @@ claude mcp add synthetic-users-confidence -- "$(pwd)/.venv/bin/synthetic-users-c
 
 ## Importar seus dados
 
-O CSV precisa ter **uma linha por respondente** e uma coluna por pergunta. Um dicionário (objeto ou arquivo `.json`) diz quais colunas são perguntas e a ordem das opções:
+| Fonte | Como passar em `fonte` | Precisa de |
+| --- | --- | --- |
+| CSV, TSV | caminho do arquivo (separador `,` `;` tab ou `\|` detectado) | nada |
+| JSON, JSONL | caminho (lista de objetos, um por respondente) | nada |
+| SQLite | caminho do `.db` + `consulta` | nada |
+| Excel | caminho do `.xlsx` (+ `aba`, se não for a primeira) | `pip install -e ".[excel]"` |
+| Parquet | caminho do `.parquet` | `pip install -e ".[parquet]"` |
+| Postgres, MySQL, BigQuery, Snowflake... | `env:SUC_DADOS_URL` + `consulta` | `pip install -e ".[sql]"` e o driver do banco |
+
+Para bancos, a URL no formato do SQLAlchemy (`postgresql+psycopg://usuario:senha@host/banco`) fica na variável de ambiente, nunca no argumento: os argumentos passam pelo LLM, e uma URL com senha é recusada. A `consulta` precisa ser um único `SELECT` (ou `WITH`). A leitura roda numa transação que sempre é desfeita, o SQLite abre em modo só leitura e, no Postgres, a transação é marcada `READ ONLY`. Mesmo assim, prefira um usuário do banco só com permissão de leitura.
+
+```bash
+claude mcp add synthetic-users-confidence -e SUC_DADOS_URL='postgresql+psycopg://leitura:SENHA@host/pesquisas' -- "$(pwd)/.venv/bin/synthetic-users-confidence"
+```
+
+Qualquer que seja a fonte, os dados precisam ter **uma linha por respondente** e uma coluna por pergunta. Um dicionário (objeto ou arquivo `.json`) diz quais colunas são perguntas e a ordem das opções:
 
 ```json
 {
@@ -110,7 +125,8 @@ python experiments/run_blind_experiment.py analyze  --config experiments/stackov
 
 - Sem checagem de dados pessoais: use só dados já anonimizados.
 - Só escalas de 5 pontos; outras escalas precisam de uma régua calibrada para elas.
-- Formato largo (uma linha por respondente); dados em formato longo precisam ser pivotados antes.
+- Formato largo (uma linha por respondente); dados em formato longo precisam ser pivotados antes, por exemplo na própria `consulta`.
+- A leitura de bancos foi testada com SQLite; nos outros bancos, depende do driver de cada um.
 - O suporte na base mede se a base trata do tema, não se concorda com a resposta.
 - Só o adaptador `http` existe; NotebookLM e RAGs sem API de busca não se conectam.
 - As faixas de leitura da dispersão são provisórias, a calibrar na etapa 2 da validação.

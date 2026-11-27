@@ -142,5 +142,5 @@ def test_stackoverflow_continua_sem_dicionario(tmp_path):
 def test_servidor_aceita_dicionario_como_objeto(pesquisa):
     from test_base import _chamar, _json
 
-    out = _json(_chamar("importar_dados", {"caminho_csv": pesquisa, "dicionario": DICIONARIO}))
+    out = _json(_chamar("importar_dados", {"fonte": pesquisa, "dicionario": DICIONARIO}))
     assert out["status"] == "ok" and out["perguntas_suportadas"] == ["confia_ia"]

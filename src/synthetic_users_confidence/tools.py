@@ -7,8 +7,8 @@ from pathlib import Path
 
 import numpy as np
 
-from . import base, confiabilidade, metrics, questionario, scales
-from .data import STRATA, Dataset, read_csv, split_holdout
+from . import base, confiabilidade, fontes, metrics, questionario, scales
+from .data import STRATA, Dataset, split_holdout
 from .scales import LABEL, PERGUNTA, SCALES
 
 MIN_HUMANS = 30  # abaixo disso o segmento não sustenta comparação
@@ -240,16 +240,22 @@ def _e_stackoverflow(colunas: list[str]) -> bool:
     return bool(cols & set(scales.PRESET_SO_2025["perguntas"])) and set(STRATA) <= cols
 
 
-def importar_dados(caminho_csv: str, fracao_holdout: float = 0.3, semente: int = 42,
-                   dicionario: dict | str | None = None) -> dict:
-    """Importa o CSV humano. `dicionario` (objeto, JSON ou caminho) diz quais colunas são perguntas e a escala.
+def importar_dados(fonte: str, fracao_holdout: float = 0.3, semente: int = 42,
+                   dicionario: dict | str | None = None, consulta: str | None = None, aba: str | None = None) -> dict:
+    """Importa as respostas humanas de um arquivo ou banco (veja `fontes.py`).
 
-    Sem dicionário: usa o da Stack Overflow 2025 se o CSV tiver as colunas dela; senão devolve
-    `precisa_dicionario` com o resumo das colunas e um rascunho para completar.
+    `dicionario` (objeto, JSON ou caminho) diz quais colunas são perguntas e a escala. Sem dicionário: usa o da
+    Stack Overflow 2025 se a fonte tiver as colunas dela; senão devolve `precisa_dicionario` com o resumo das
+    colunas e um rascunho para completar.
     """
     if not 0 < fracao_holdout < 1:
         raise ValueError("fracao_holdout precisa estar entre 0 e 1")
-    colunas, rows = read_csv(caminho_csv)
+    try:
+        colunas, rows = fontes.ler(fonte, consulta, aba)
+    except fontes.ErroFonte as e:
+        return {"rotulo": LABEL, "status": "fonte_invalida", "erros": [str(e)]}
+    if not rows:
+        return {"rotulo": LABEL, "status": "fonte_invalida", "erros": ["a fonte não tem nenhuma linha"]}
     avisos: list[str] = []
     if dicionario is None:
         if not _e_stackoverflow(colunas):
