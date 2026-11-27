@@ -15,9 +15,17 @@ mcp = MCPServer("synthetic-users-confidence")
 
 
 @mcp.tool()
-def importar_dados(caminho_csv: str, fracao_holdout: float = 0.3, semente: int = 42) -> dict:
-    """Importa o CSV de respostas humanas e separa o holdout por respondente."""
-    return tools.importar_dados(caminho_csv, fracao_holdout, semente)
+def importar_dados(
+    caminho_csv: str, fracao_holdout: float = 0.3, semente: int = 42, dicionario: dict | str | None = None
+) -> dict:
+    """Importa o CSV de respostas humanas (uma linha por respondente) e separa o holdout.
+
+    dicionario: objeto, JSON ou caminho de um .json que diz quais colunas são perguntas, a escala de 1 a 5
+    de cada uma e os estratos do holdout. Sem ele, num CSV que não é da Stack Overflow 2025, a ferramenta
+    devolve status `precisa_dicionario` com as colunas, as opções comuns e um rascunho (`sugestao`):
+    confirme a ordem das escalas com a pessoa e chame de novo com `dicionario`.
+    """
+    return tools.importar_dados(caminho_csv, fracao_holdout, semente, dicionario)
 
 
 @mcp.tool()

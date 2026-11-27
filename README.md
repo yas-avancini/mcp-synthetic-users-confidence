@@ -6,17 +6,17 @@ Servidor MCP que mede quão fiéis são usuários sintéticos a pessoas reais. O
 
 ## Como funciona nesta versão
 
-Você traz as respostas sintéticas já coletadas; o servidor não chama nenhum LLM. Ele compara com as respostas humanas do holdout da [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/) (ODbL 1.0).
+Você traz as respostas sintéticas já coletadas; o servidor não chama nenhum LLM. Ele compara com as respostas humanas do holdout de qualquer pesquisa em CSV (veja [Importar seus dados](#importar-seus-dados)). O exemplo pronto usa a [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/) (ODbL 1.0).
 
 | Ferramenta | O que faz |
 | --- | --- |
 | `conectar_base` | Conecta o RAG que a equipe já tem para calcular o sinal de suporte na base (veja abaixo) |
-| `importar_dados` | Lê o CSV humano e separa o holdout por respondente (estratificado por `Age`, `DevType`, `Employment`) |
+| `importar_dados` | Lê o CSV humano com um dicionário do questionário e separa o holdout por respondente, estratificado pelas colunas que você escolher |
 | `amostrar` | Contagens, média e variância das respostas sintéticas |
 | `pontuar_resposta` | Sinais de confiança separados, com margem de erro (95%); o que não foi calculado vem com `status` e motivo |
 | `validar_usuario` | Distância entre o usuário e os humanos do segmento, com intervalo de 95%, piso de ruído humano, razão de variância, margem de erro (média, proporção e variância) e p-value (distribuição e variância) |
 
-Perguntas suportadas: `AIAcc` (confiança na precisão da IA) e `AISent` (sentimento sobre IA).
+Perguntas suportadas: as do dicionário importado. Sem dicionário, valem `AIAcc` (confiança na precisão da IA) e `AISent` (sentimento sobre IA), da Stack Overflow.
 
 ## Rodar
 
@@ -32,6 +32,32 @@ Instalar no Claude Code:
 ```bash
 claude mcp add synthetic-users-confidence -- "$(pwd)/.venv/bin/synthetic-users-confidence"
 ```
+
+## Importar seus dados
+
+O CSV precisa ter **uma linha por respondente** e uma coluna por pergunta. Um dicionário (objeto ou arquivo `.json`) diz quais colunas são perguntas e a ordem das opções:
+
+```json
+{
+  "nome": "pesquisa-ia-2026",
+  "id": "respondente",
+  "estratos": ["cargo", "faixa_etaria"],
+  "separador_multiplo": ";",
+  "perguntas": {
+    "confia_ia": {
+      "texto": "Quanto você confia nas respostas da IA?",
+      "rotulo": "Confiança na IA",
+      "escala": {"Discordo totalmente": 1, "Discordo": 2, "Neutro": 3, "Concordo": 4, "Concordo totalmente": 5}
+    }
+  }
+}
+```
+
+- **Sem dicionário**, `importar_dados` devolve `precisa_dicionario` com as colunas, as opções mais comuns de cada uma e um rascunho (`sugestao`). O agente confirma com você a ordem de cada escala e chama de novo com `dicionario`.
+- **Privacidade na detecção:** colunas com mais de 12 opções (texto livre, ids, números) não têm os valores lidos, e uma opção só aparece se pelo menos 5 respondentes a deram. Nomes e valores raros não vão para o agente.
+- **Escala de 5 pontos:** a régua de confiabilidade foi definida em pontos de uma escala de 1 a 5, então cada pergunta precisa usar os 5 pontos. Opções fora da escala (como "Não sei") são ignoradas e contadas em `cobertura`.
+- **Estratos** definem o sorteio do holdout e podem ser usados como `segmento` em `validar_usuario`. Em colunas de múltipla escolha, as opções são separadas por `separador_multiplo`.
+- A saída avisa quando uma opção da escala não aparece no CSV (nome digitado diferente) e recusa ids repetidos.
 
 ## Conectar a base de conhecimento (RAG)
 
@@ -83,6 +109,8 @@ python experiments/run_blind_experiment.py analyze  --config experiments/stackov
 ## Limites conhecidos
 
 - Sem checagem de dados pessoais: use só dados já anonimizados.
+- Só escalas de 5 pontos; outras escalas precisam de uma régua calibrada para elas.
+- Formato largo (uma linha por respondente); dados em formato longo precisam ser pivotados antes.
 - O suporte na base mede se a base trata do tema, não se concorda com a resposta.
 - Só o adaptador `http` existe; NotebookLM e RAGs sem API de busca não se conectam.
 - As faixas de leitura da dispersão são provisórias, a calibrar na etapa 2 da validação.

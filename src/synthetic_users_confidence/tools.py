@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
-import numpy as np
-
+from collections import Counter
 from pathlib import Path
 
-from . import base, confiabilidade, metrics
-from .data import Dataset, load_csv
+import numpy as np
+
+from . import base, confiabilidade, metrics, questionario, scales
+from .data import STRATA, Dataset, read_csv, split_holdout
 from .scales import LABEL, PERGUNTA, SCALES
 
 MIN_HUMANS = 30  # abaixo disso o segmento não sustenta comparação
@@ -234,19 +235,73 @@ def _suporte(pergunta: str, segmento: dict[str, str] | None, incluir_texto: bool
     return base.sinal(cfg, _adaptador(cfg), PERGUNTA.get(pergunta, pergunta), segmento, incluir_texto)
 
 
-def importar_dados(caminho_csv: str, fracao_holdout: float = 0.3, semente: int = 42) -> dict:
-    ds = load_csv(caminho_csv, fracao_holdout, semente)
+def _e_stackoverflow(colunas: list[str]) -> bool:
+    cols = set(colunas)
+    return bool(cols & set(scales.PRESET_SO_2025["perguntas"])) and set(STRATA) <= cols
+
+
+def importar_dados(caminho_csv: str, fracao_holdout: float = 0.3, semente: int = 42,
+                   dicionario: dict | str | None = None) -> dict:
+    """Importa o CSV humano. `dicionario` (objeto, JSON ou caminho) diz quais colunas são perguntas e a escala.
+
+    Sem dicionário: usa o da Stack Overflow 2025 se o CSV tiver as colunas dela; senão devolve
+    `precisa_dicionario` com o resumo das colunas e um rascunho para completar.
+    """
+    if not 0 < fracao_holdout < 1:
+        raise ValueError("fracao_holdout precisa estar entre 0 e 1")
+    colunas, rows = read_csv(caminho_csv)
+    avisos: list[str] = []
+    if dicionario is None:
+        if not _e_stackoverflow(colunas):
+            return {
+                "rotulo": LABEL, "status": "precisa_dicionario",
+                "motivo": "diga quais colunas são perguntas e a ordem das opções de cada escala: "
+                          "chame importar_dados de novo com `dicionario`",
+                "registros": len(rows),
+                **questionario.detectar(colunas, rows),
+                "formato": questionario.FORMATO,
+            }
+        d = {**scales.PRESET_SO_2025, "perguntas": {
+            q: p for q, p in scales.PRESET_SO_2025["perguntas"].items() if q in colunas}}
+        if d["id"] not in colunas:
+            d.pop("id")
+        avisos.append("sem dicionário: usando o da Stack Overflow Developer Survey 2025")
+    else:
+        try:
+            d = questionario.carregar(dicionario)
+        except (OSError, ValueError) as e:
+            return {"rotulo": LABEL, "status": "dicionario_invalido", "erros": [f"não consegui ler o dicionário: {e}"]}
+    erros = questionario.validar(d, colunas)
+    if erros:
+        return {"rotulo": LABEL, "status": "dicionario_invalido", "erros": erros}
+    if d.get("id"):
+        ids = Counter((r.get(d["id"]) or "").strip() for r in rows)
+        repetidos = sum(1 for n in ids.values() if n > 1)
+        if repetidos:
+            return {"rotulo": LABEL, "status": "dados_invalidos",
+                    "erros": [f"{repetidos} id(s) repetido(s) em {d['id']!r}: o CSV precisa ter uma linha por respondente"]}
+    estratos = tuple(d.get("estratos", []))
+    escalas = {q: dict(p["escala"]) for q, p in d["perguntas"].items()}
+    ds = Dataset(rows=rows, holdout_idx=split_holdout(rows, fracao_holdout, semente, estratos),
+                 escalas=escalas, separador=d.get("separador_multiplo", ";"))
+    cob, avisos_cob = questionario.cobertura(rows, d)
+    scales.ativar(d)
     STATE["ds"] = ds
+    avisos.append("holdout sorteado por respondente, " + (
+        f"estratificado por {', '.join(estratos)}" if estratos else "sem estratos (sorteio simples)"))
     return {
         "rotulo": LABEL,
-        "registros": len(ds.rows),
+        "status": "ok",
+        "questionario": d.get("nome"),
+        "registros": len(rows),
         "holdout": len(ds.holdout_idx),
-        "perguntas_suportadas": sorted(SCALES),
+        "perguntas_suportadas": sorted(escalas),
+        "cobertura": cob,
         "dados_pessoais": {
             "status": "nao_verificado",
             "motivo": "a checagem de dados pessoais ainda não existe nesta versão; use apenas dados já anonimizados",
         },
-        "avisos": ["holdout sorteado por respondente, estratificado por Age, DevType e Employment"],
+        "avisos": avisos + avisos_cob,
     }
 
 
