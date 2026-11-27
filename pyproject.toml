@@ -1,0 +1,25 @@
+[project]
+name = "synthetic-users-confidence"
+version = "0.1.0"
+description = "Servidor MCP que mede a fidelidade de usuários sintéticos a pessoas reais."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = ["mcp>=2.3,<3", "numpy>=1.26"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+cofre = ["keyring>=25"]  # guarda a chave do RAG no cofre do sistema
+
+[project.scripts]
+synthetic-users-confidence = "synthetic_users_confidence.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/synthetic_users_confidence"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

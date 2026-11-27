@@ -1,0 +1,28 @@
+{
+  "nome": "stackoverflow-2025-blind",
+  "registrado_em": "2026-11-26",
+  "descricao": "Usuário sintético gerado às cegas (sem ver dados humanos) contra o holdout da Stack Overflow Developer Survey 2025.",
+  "modelo": "claude-haiku-5-5",
+  "n_por_celula": 100,
+  "paralelismo": 4,
+  "semente_holdout": 42,
+  "fracao_holdout": 0.3,
+  "alfa": 0.05,
+  "perguntas": {
+    "AIAcc": "How much do you trust the accuracy of the output from AI tools as part of your development workflow?",
+    "AISent": "How favorable is your stance on using AI tools as part of your development workflow?"
+  },
+  "segmentos": [
+    {"nome": "idade-18-24", "filtro": {"Age": "18-24 years old"}},
+    {"nome": "idade-25-34", "filtro": {"Age": "25-34 years old"}},
+    {"nome": "idade-35-44", "filtro": {"Age": "35-44 years old"}},
+    {"nome": "idade-45-54", "filtro": {"Age": "45-54 years old"}},
+    {"nome": "idade-55-64", "filtro": {"Age": "55-64 years old"}}
+  ],
+  "criterio_de_aprovacao": "Em cada célula o usuário sintético fica mais perto dos humanos do segmento do que o baseline da distribuição geral (EMD menor) e do que o placebo (outro segmento). Aprovação do experimento: pelo menos 70% das células, com p-value corrigido por Holm.",
+  "regras": [
+    "O gerador nunca recebe dados humanos, só a descrição do segmento e a pergunta.",
+    "Cada resposta vem de uma chamada isolada, em pasta vazia, sem ferramentas, memória nem configurações.",
+    "Esta configuração não muda depois de gerar: o hash dela fica gravado nas respostas e a análise recusa se mudar."
+  ]
+}
