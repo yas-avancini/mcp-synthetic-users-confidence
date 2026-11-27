@@ -113,3 +113,23 @@ def test_confiabilidade_oficial_no_json(dataset):
     # sem os três sinais calculados, nunca passa de média
     parecido = tools.validar_usuario("AIAcc", {"Age": "25-34"}, [2, 3, 4] * 20)["confiabilidade"]
     assert parecido["nivel"] in ("média", "baixa")
+
+
+def test_melhor_que_qualquer_um_compara_com_o_segmento(tmp_path):
+    # Segmento "18-24" confia muito (5); o resto da população desconfia (1).
+    path = tmp_path / "r.csv"
+    with open(path, "w", newline="", encoding="utf-8") as fh:
+        w = csv.DictWriter(fh, fieldnames=["ResponseId", "Age", "DevType", "Employment", "AIAcc"])
+        w.writeheader()
+        for i in range(920):
+            idade, nota = ("18-24", 4) if i < 120 else ("45-54", 0)
+            w.writerow({"ResponseId": i, "Age": idade, "DevType": "Developer", "Employment": "Employed",
+                        "AIAcc": LABELS[nota]})
+    tools.importar_dados(str(path))
+    # O sintético (2 e 3) está longe do segmento, mas uma pessoa qualquer (quase sempre 1) está mais longe ainda.
+    # Comparar o sorteio com o próprio sintético, em vez do segmento, daria False.
+    out = tools.validar_usuario("AIAcc", {"Age": "18-24"}, [2] * 10 + [3] * 20)
+    assert out["confiabilidade"]["melhor_que_perguntar_a_qualquer_um"] is True
+    # Um sintético igual à população geral não é melhor que perguntar a qualquer um.
+    out = tools.validar_usuario("AIAcc", {"Age": "18-24"}, [1] * 30)
+    assert out["confiabilidade"]["melhor_que_perguntar_a_qualquer_um"] is False

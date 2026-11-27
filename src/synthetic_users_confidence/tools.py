@@ -371,8 +371,9 @@ def validar_usuario(pergunta: str, segmento: dict[str, str], respostas: list, in
     geral = ds.humans(pergunta, {}, holdout=False)
     melhor_geral = None
     if len(geral):
+        # Referência: respostas de qualquer pessoa, mesmo tamanho do usuário. Ele precisa chegar mais perto do segmento que ela.
         sorteio = np.random.default_rng(0).choice(geral, size=len(synth))
-        melhor_geral = bool(e < metrics.emd(metrics.pmf(sorteio), ps))
+        melhor_geral = bool(e < metrics.emd(metrics.pmf(sorteio), ph))
     dif = float(synth.mean()) - float(human.mean())
     razao_v = None if np.isnan(razao) else round(razao, 3)
     margem = max(metrics.margin_of_error_mean(synth) or 0.0, metrics.margin_of_error_mean(human) or 0.0)
